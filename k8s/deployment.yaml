@@ -22,7 +22,8 @@ spec:
         volumeMounts:
         - name: data
           mountPath: /app/data
-volumes:
-  - name: data
-    persistentVolumeClaim:
-      claimName: uptime-kuma-pvc
+
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: uptime-kuma-pvc
